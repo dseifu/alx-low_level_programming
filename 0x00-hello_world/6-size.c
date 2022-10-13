@@ -6,11 +6,14 @@
 */
 int main(void)
 {
-long int i;
-long long int j;
-printf("Size of a char:%s byte(s)\n", sizeof(char));
-printf("Size of a int:%s byte(s)\n", sizeof(int));
-printf("Size of a long int:%s byte(s)\n", sizeof(i));
-printf("Size of a long long int:%s byte(s)\n", sizeof(j));
-printf("Size of a float:%s byte(s)\n", sizeof(float));
+char c;
+int i;  
+long int li;
+long long int lli;
+float f;
+printf("Size of a char:%s byte(s)\n", sizeof(c));
+printf("Size of a int:%s byte(s)\n", sizeof(i));
+printf("Size of a long int:%s byte(s)\n", sizeof(li));
+printf("Size of a long long int:%s byte(s)\n", sizeof(lli));
+printf("Size of a float:%s byte(s)\n", sizeof(f));
 }
