@@ -6,8 +6,9 @@
 */
 int main(void)
 {
+int i;
 char alp[] = "abcdfghijklmnoprstuvwxyz";
-for (int i = 0; i < 24; i++)
+for (i = 0; i < 24; i++)
 putchar(alp[i]);
 return (0);
 }
