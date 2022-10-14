@@ -27,15 +27,15 @@ putchar(n1d2);
 putchar(' ');
 putchar(n2d1);
 putchar(n2d2);
-//if (n1d1 == 57 && n2d1 == 57 && n2d2 == 57 && n1d2 == 56)
+/*if (n1d1 == 57 && n2d1 == 57 && n2d2 == 57 && n1d2 == 56)
 //{
 //continue;
 //}
 //else
-{
+{*/
 putchar(',');
 putchar(' ');
-}
+
 }
 }
 }
