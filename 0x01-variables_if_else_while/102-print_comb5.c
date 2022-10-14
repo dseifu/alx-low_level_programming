@@ -18,18 +18,20 @@ for (n2d1 = n1d1; n2d1 <= 57; n2d1++)
 {
 for (n2d2 = n1d2; n2d2 <= 57; n2d2++)
 {
-if ((n1d1 == 48 && n1d2 == 48 && n2d1 == 48 && n2d2 == 48) || (n1d1 == 57 && n1d2 == 57 && n2d1 == 57 && n2d2 == 57))
-continue;
+/** 
+* if ((n1d1 == 48 && n1d2 == 48 && n2d1 == 48 && n2d2 == 48) || (n1d1 == 57 && n1d2 == 57 && n2d1 == 57 && n2d2 == 57))
+* continue;
+*/
 putchar(n1d1);
 putchar(n1d2);
 putchar(' ');
 putchar(n2d1);
 putchar(n2d2);
-if (n1d1 == 57 && n2d1 == 57 && n2d2 == 57 && n1d2 == 56)
-{
-continue;
-}
-else
+//if (n1d1 == 57 && n2d1 == 57 && n2d2 == 57 && n1d2 == 56)
+//{
+//continue;
+//}
+//else
 {
 putchar(',');
 putchar(' ');
