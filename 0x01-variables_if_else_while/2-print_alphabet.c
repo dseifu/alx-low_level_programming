@@ -10,5 +10,6 @@ int i;
 char alp[] = "abcdefghijklmnopqrstuvwxyz";
 for (i = 0; i < 26; i++)
 putchar(alp[i]);
+putchar(10);
 return (0);
 }
