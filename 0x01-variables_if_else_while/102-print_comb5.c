@@ -16,7 +16,7 @@ for (n1d2 = 48; n1d2 <= 57; n1d2++)
 {
 for (n2d1 = n1d1; n2d1 <= 57; n2d1++)
 {
-if(n2d1 == n1d1)
+if (n2d1 == n1d1)
 n2d2 = n1d2 + 1;
 else
 n2d2 = 48;
