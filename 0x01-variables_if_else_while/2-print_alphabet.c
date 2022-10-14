@@ -8,6 +8,6 @@ int main(void)
 {
 char alp[] = "abcdefghijklmnopqrstuvwxyz";
 for (int i = 0; i < 26; i++)
-  putchar(alp[i]);
+putchar(alp[i]);
 return (0);
 }
