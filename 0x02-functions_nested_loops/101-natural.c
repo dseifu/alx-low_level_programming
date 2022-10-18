@@ -15,18 +15,21 @@ int main(void)
 	for (i = 1; ; i++)
 	{
 		mul3 = 3 * i;
-		mul5 = 5 * i;
-		if (mul3 == mul5 && mul3 < 1024)
+		if (mul3 < 1024)
 			sum = sum + mul3;
 		else
+			break;
+	}
+	for (i = 1; ; i++)
+	{
+		mul5 = 5 * i;
+		if (mul5 % 3 != 0)
 		{
-			if (mul3 < 1024)
-				sum = sum + mul3;
-			else
-				break;
 			if (mul5 < 1024)
 				sum = sum + mul5;
 		}
+		else
+			continue;
 	}
 	printf("%i\n", sum);
 	return (0);
