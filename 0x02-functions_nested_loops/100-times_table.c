@@ -11,26 +11,28 @@ void write_digits(int mul)
 	int quo;
 	int nofdig;
 	int index;
+	int digits3[3];
+	int digits2[2];
 
 	do {
 		quo = mul / 10;
 		++nofdig;
 	} while (quo != 0);
-
-	if (nofdig == 3)
-		int digits[3];
-	else
-		int digits[2];
-
 	for (index = 0; index < nofdig; index++)
 	{
 		rem = mul % 10;
 		mul = mul / 10;
-		digits[index] = rem;
+		if (nofdig == 3)
+			digits3[index] = rem;
+		else
+			digits2[index] = rem;
 	}
 	for (i = nofdig - 1; i >= 0; i--)
 	{
-		_putchar('0' + digits[i]);
+		if (nofdig == 3)
+			_putchar('0' + digits3[i]);
+		else
+			_putchar('0' + digits2[i];
 	}
 }
 
