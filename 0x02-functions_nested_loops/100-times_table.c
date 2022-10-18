@@ -8,16 +8,16 @@ void write_digits(int mul)
 {
 	int i;
 	int rem;
-	int digits[2];
+	int digits[3];
 	int index;
 
-	for (index = 0; index < 2; index++)
+	for (index = 0; index < 3; index++)
 	{
 		rem = mul % 10;
 		mul = mul / 10;
 		digits[index] = rem;
 	}
-	for (i = 1; i >= 0; i--)
+	for (i = 2; i >= 0; i--)
 	{
 		_putchar('0' + digits[i]);
 	}
