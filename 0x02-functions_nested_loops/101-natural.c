@@ -16,11 +16,16 @@ int main(void)
 	{
 		mul3 = 3 * i;
 		mul5 = 5 * i;
+		if (mul3 == mul5 && mul3 < 1024)
+			sum = sum + mul3;
+		else
 		{
-			if (mul3 < 1024 && mul5 < 1024)
-				sum = sum + mul3 + mul5;
+			if (mul3 < 1024)
+				sum = sum + mul3;
 			else
 				break;
+			if (mul5 < 1024)
+				sum = sum + mul5;
 		}
 	}
 	printf("%i\n", sum);
