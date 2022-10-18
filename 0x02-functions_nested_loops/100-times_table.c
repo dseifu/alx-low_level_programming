@@ -14,8 +14,9 @@ void write_digits(int mul)
 	int digits3[3];
 	int digits2[2];
 
+	quo = mul;
 	do {
-		quo = mul / 10;
+		quo = quo / 10;
 		++nofdig;
 	} while (quo != 0);
 	for (index = 0; index < nofdig; index++)
