@@ -27,6 +27,8 @@ int main(void)
 		{
 			if (mul5 < 1024)
 				sum = sum + mul5;
+			else
+				break;
 		}
 		else
 			continue;
