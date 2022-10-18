@@ -39,7 +39,10 @@ void times_table(void)
 			if (mul >= 10)
 				write_digits(mul);
 			else
+			{
 				_putchar('0' + mul);
+				_putchar(' ');
+			}
 			if (row != 9)
 			{
 				_putchar(',');
