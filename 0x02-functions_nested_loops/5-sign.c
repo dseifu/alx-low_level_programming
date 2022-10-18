@@ -1,4 +1,4 @@
-#incude "main.h"
+#include "main.h"
 /**
  * print_sign - print + for positive numbers - for negative and 0 for zero
  * @n: The number to checked
