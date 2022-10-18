@@ -44,7 +44,7 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-				if (mul < 10)
+				if ((col * (row + 1)) < 10)
 					_putchar(' ');
 			}
 		}
