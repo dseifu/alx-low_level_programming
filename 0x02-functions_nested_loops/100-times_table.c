@@ -1,42 +1,46 @@
 #include "main.h"
 /**
- * write_digits - print the digits of a multiplication of two numbers whose
- * result is greater than 10
+ * write_2digits - print the digits of a multiplication of two numbers whose
+ * result is greater than 10 and less than 100
  * @mul: The number, which is the result of the multiplication of two numbers
  */
-void write_digits(int mul)
+void write_2digits(int mul)
 {
 	int i;
 	int rem;
-	int quo;
-	int nofdig;
 	int index;
-	int digits3[3];
-	int digits2[2];
+	int digits[2];
 
-	quo = mul;
-	do {
-		quo = quo / 10;
-		++nofdig;
-	} while (quo != 0);
-	for (index = 0; index < nofdig; index++)
+	for (index = 0; index < 2; index++)
 	{
 		rem = mul % 10;
 		mul = mul / 10;
-		if (nofdig == 3)
-			digits3[index] = rem;
-		else
-			digits2[index] = rem;
+		digits[index] = rem;
 	}
-	for (i = nofdig - 1; i >= 0; i--)
-	{
-		if (nofdig == 3)
-			_putchar('0' + digits3[i]);
-		else
-			_putchar('0' + digits2[i]);
-	}
+	for (i = 1; i >= 0; i--)
+		_putchar('0' + digits[i]);
 }
+/**
+ * write_3digits - print the digits of a multiplication of two numbers whose
+ * result is greater than 100
+ * @mul: The number, which is the result of the multiplication of two numbers
+ */
+void write_3digits(int mul)
+{
+	int i;
+	int rem;
+	int index;
+	int digits[3];
 
+	for (index = 0; index < 3; index++)
+	{
+		rem = mul % 10;
+		mul = mul / 10;
+		digits[index] = rem;
+	}
+	for (i = 2; i >= 0; i--)
+		_putchar('0' + digits[i]);
+}
 /**
  * print_times_table - printing a time table give a number
  * @n: The number we prepare a time table for
@@ -54,8 +58,10 @@ void print_times_table(int n)
 			for (row = 0; row <= n; row++)
 			{
 				mul = col * row;
-				if (mul >= 10)
-					write_digits(mul);
+				if (mul >= 10 && mul < 100)
+					write_2digits(mul);
+				else if (mul >= 100)
+					write_3digits(mul);
 				else
 					_putchar('0' + mul);
 				if (row != n)
