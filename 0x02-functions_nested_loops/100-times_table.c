@@ -32,7 +32,7 @@ void write_digits(int mul)
 		if (nofdig == 3)
 			_putchar('0' + digits3[i]);
 		else
-			_putchar('0' + digits2[i];
+			_putchar('0' + digits2[i]);
 	}
 }
 
