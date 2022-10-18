@@ -6,7 +6,7 @@ void print_alphabet_x10(void)
 {
 	int i;
 	int j;
-	int alp[] = "abcdefghijklmnopqrstuvwxyz";
+	char alp[] = "abcdefghijklmnopqrstuvwxyz";
 
 	for (i = 0; i < 9; i++)
 	{
