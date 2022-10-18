@@ -6,25 +6,18 @@
  */
 void write_digits(int mul)
 {
-	int index;
+	int i;
 	int rem;
-	int digits[];
-	int size;
+	int digits[2];
+	int index;
 
-	rem = mul % 10;
-	mul = mul / 10;
-	index = 0;
-	digits[index] = rem;
-	index++;
-	while (mul > 0)
+	for (index = 0; index < 2; index++)
 	{
 		rem = mul % 10;
 		mul = mul / 10;
 		digits[index] = rem;
-		index++;
 	}
-	size = sizeof(digits) / sizeof(digits[0]);
-	for (i = size - 1; i >= 0; i--)
+	for (i = 1; i >= 0; i--)
 	{
 		_putchar('0' + digits[i]);
 	}
@@ -34,7 +27,6 @@ void write_digits(int mul)
  */
 void times_table(void)
 {
-	int i;
 	int col;
 	int row;
 	int mul;
