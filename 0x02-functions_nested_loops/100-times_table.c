@@ -17,7 +17,10 @@ void write_digits(int mul)
 		++nofdig;
 	} while (quo != 0);
 
-	int digits[nofdig];
+	if (nofdig == 3)
+		int digits[3];
+	else
+		int digits[2];
 
 	for (index = 0; index < nofdig; index++)
 	{
