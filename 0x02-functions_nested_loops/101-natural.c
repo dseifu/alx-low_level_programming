@@ -7,23 +7,25 @@
 int main(void)
 {
 	int i;
+	int mul3;
+	int mul5;
 	int sum;
 
 	sum = 0;
 	for (i = 1; ; i++)
 	{
-		if ((3 * i) < 1024)
-			sum = sum + (3 * i);
+		mul3 = 3 * i;
+		mul5 = 5 * i;
+		if (mul3 == mul5 && mul5 < 1024)
+			sum = sum + mul3;
 		else
-			break;
+		{
+			if (mul3 < 1024 && mul5 < 1024)
+				sum = sum + mul3 + mul5;
+			else
+				break;
+		}
 	}
-	for (i = 1; ; i++)
-	{
-		if ((5 * i) < 1024)
-			sum = sum + (5 * i);
-		else
-			break;
-	}
-	printf("%i", sum);
+	printf("%i\n", sum);
 	return (0);
 }
