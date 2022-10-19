@@ -5,14 +5,13 @@
  *
  * Return: The value of the nth Fibonacci number
  */
-long long fibo(int n)
+long fibo(int n)
 {
 	if (n == 1)
 		return (1);
-	if (n == 2)
+	else if (n == 2)
 		return (2);
-	if (n > 2)
-		return (fibo(n - 2) + fibo(n - 1));
+	return (fibo(n - 2) + fibo(n - 1));
 }
 /**
  * main - the entry point
@@ -25,7 +24,7 @@ int main(void)
 
 	for (i = 1; i <= 98; i++)
 	{
-		printf("%lli", fibo(i));
+		printf("%li", fibo(i));
 		if (i != 98)
 			printf(", ");
 	}
