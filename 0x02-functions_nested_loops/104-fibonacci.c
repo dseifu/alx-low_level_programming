@@ -1,4 +1,4 @@
-#include <main.h>
+#include <stdio.h>
 /**
  * fibo - calulate the nth Fibonacci number in Fibonacci numbers
  * @n: The nth number in Fibonacci numbers
