@@ -20,4 +20,5 @@ int main(void)
 			sum = sum + fib[i];
 	}
 	printf("%li", sum);
+	return (0);
 }
