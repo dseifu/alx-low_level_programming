@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i;
-	double fib[98];
+	long double fib[98];
 
 	fib[0] = 1;
 	fib[1] = 2;
@@ -15,7 +15,7 @@ int main(void)
 		fib[i] = fib[i - 2] + fib[i - 1];
 	for (i = 0; i < 98; i++)
 	{
-		printf("%ll", (long long)fib[i]);
+		printf("%.0f", fib[i]);
 		if (i != 97)
 			printf(", ");
 	}
