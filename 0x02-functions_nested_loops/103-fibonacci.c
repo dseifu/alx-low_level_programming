@@ -10,6 +10,7 @@ int main(void)
 	long int sum;
 	int fib[32];
 
+	sum = 0;
 	fib[0] = 1;
 	fib[1] = 2;
 	for (i = 2; i < 32; i++)
@@ -19,6 +20,6 @@ int main(void)
 		if (fib[i] % 2 == 0)
 			sum = sum + fib[i];
 	}
-	printf("%li", sum);
+	printf("%li\n", sum);
 	return (0);
 }
