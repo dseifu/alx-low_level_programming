@@ -1,19 +1,5 @@
 #include <stdio.h>
 /**
- * fibo - calulate the nth Fibonacci number in Fibonacci numbers
- * @n: The nth number in Fibonacci numbers
- *
- * Return: The value of the nth Fibonacci number
- */
-long fibo(int n)
-{
-	if (n == 1)
-		return (1);
-	else if (n == 2)
-		return (2);
-	return (fibo(n - 2) + fibo(n - 1));
-}
-/**
  * main - the entry point
  *
  * Return: 0 to exit
@@ -21,11 +7,16 @@ long fibo(int n)
 int main(void)
 {
 	int i;
+	double fib[98];
 
-	for (i = 1; i <= 98; i++)
+	fib[0] = 1;
+	fib[1] = 2;
+	for (i = 2; i < 98; i++)
+		fib[i] = fib[i - 2] + fib[i - 1];
+	for (i = 0; i < 98; i++)
 	{
-		printf("%li", fibo(i));
-		if (i != 98)
+		printf("%.0lf", fib[i]);
+		if (i != 97)
 			printf(", ");
 	}
 	printf("\n");
