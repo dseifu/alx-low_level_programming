@@ -26,6 +26,5 @@ void print_triangle(int size)
 			--sp;
 			_putchar(10);
 		}
-		_putchar('\n');
 	}
 }
