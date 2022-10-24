@@ -12,12 +12,24 @@ int _atoi(char *s)
 {
 	int i;
 	int l = strlen(s);
-	char sc[] = s;
+	int sign = 1;
+	int index = 0;
+	char *sc;
 
-	for (i = 0; i < l; i++)
+	if (s[0] >= 48 && s[0] <= 57)
 	{
-		if (sc[i] == ' ')
-			sc[i] = '+';
+		return (atoi(s));
 	}
-	return (atoi(sc));
+	else
+	{
+		for (i = 0; i < l; i++)
+		{
+			if (s[i] == '-')
+				sign = sign * -1;
+			if (index == 0 && s[i] >= 48 && s[i] <= 57)
+				index = i;
+		}
+		sc = s + index;
+		return (atoi(sc) * sign);
+	}
 }

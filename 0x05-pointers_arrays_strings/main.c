@@ -9,11 +9,9 @@
 
 int main(void)
 {
-	int n;
+	int nb;
 
-	n = 402;
-	printf("n=%d\n", n);
-	reset_to_98(&n);
-	printf("n=%d\n", n);
+	nb = _atoi("          ------++++++-----+++++--98");
+	printf("%d\n", nb);
 	return (0);
 }
