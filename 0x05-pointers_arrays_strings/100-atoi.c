@@ -27,7 +27,10 @@ int _atoi(char *s)
 			if (s[i] == '-')
 				sign = sign * -1;
 			if (index == 0 && s[i] >= 48 && s[i] <= 57)
+			{
 				index = i;
+				break;
+			}
 		}
 		sc = s + index;
 		return (atoi(sc) * sign);
