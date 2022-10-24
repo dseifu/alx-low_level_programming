@@ -15,6 +15,7 @@ int _atoi(char *s)
 	int sign = 1;
 	int index = 0;
 	char *sc;
+	int num;
 
 	if (s[0] >= 48 && s[0] <= 57)
 	{
@@ -33,6 +34,10 @@ int _atoi(char *s)
 			}
 		}
 		sc = s + index;
-		return (atoi(sc) * sign);
+		num = atoi(sc);
+		if (sign == -1)
+			return (-num);
+		else
+			return (num);
 	}
 }
