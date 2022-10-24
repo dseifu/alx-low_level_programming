@@ -8,9 +8,9 @@
 
 void puts_half(char *str)
 {
-	int i;
-	int l = strlen(str);
-	int hl;
+	long unsigned int i;
+	long unsigned int l = strlen(str);
+	long unsigned int hl;
 
 	if (l % 2 == 0)
 		hl = l / 2;
