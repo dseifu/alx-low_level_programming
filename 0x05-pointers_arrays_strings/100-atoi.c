@@ -12,11 +12,12 @@ int _atoi(char *s)
 {
 	int i;
 	int l = strlen(s);
+	char sc[] = s;
 
 	for (i = 0; i < l; i++)
 	{
-		if (s[i] == ' ')
-			s[i] = '+';
+		if (sc[i] == ' ')
+			sc[i] = '+';
 	}
-	return (atoi(s));
+	return (atoi(sc));
 }
