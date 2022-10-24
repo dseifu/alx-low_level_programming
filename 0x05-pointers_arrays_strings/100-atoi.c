@@ -14,7 +14,6 @@ int _atoi(char *s)
 	int l = strlen(s);
 	int sign = 1;
 	int index = 0;
-	char *sc;
 	int num;
 
 	if (s[0] >= 48 && s[0] <= 57)
@@ -29,8 +28,11 @@ int _atoi(char *s)
 			{
 				if (s[i] == '-' && (s[i + 1] >= 48 && s[i + 1] <= 57))
 				{
-					sc = s + i;
-					return (atoi(sc));
+					sign = sign * -1;
+					if (sign == -1)
+						return (atoi(s + i));
+					else
+						return (atoi(s + i + 1));
 				}
 			}
 			if (s[i] == '-')
@@ -41,8 +43,7 @@ int _atoi(char *s)
 				break;
 			}
 		}
-		sc = s + index;
-		num = atoi(sc);
+		num = atoi(s + index);
 		if (sign == -1)
 			return (-num);
 		else
