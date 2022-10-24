@@ -10,8 +10,8 @@
 
 int _atoi(char *s)
 {
-	unsigned long int i;
-	unsigned long int l = strlen(s);
+	int i;
+	int l = strlen(s);
 
 	for (i = 0; i < l; i++)
 	{
