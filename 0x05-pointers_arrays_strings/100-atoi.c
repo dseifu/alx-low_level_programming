@@ -25,6 +25,14 @@ int _atoi(char *s)
 	{
 		for (i = 0; i < l; i++)
 		{
+			if (i < l - 1)
+			{
+				if (s[i] == '-' && (s[i + 1] >= 48 && s[i + 1] <= 57))
+				{
+					sc = s + i;
+					return (atoi(sc));
+				}
+			}
 			if (s[i] == '-')
 				sign = sign * -1;
 			if (index == 0 && s[i] >= 48 && s[i] <= 57)
