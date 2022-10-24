@@ -2,7 +2,7 @@
 
 /**
  * print_array - print n elements of an array
- * @a - the array
+ * @a: the array
  * @n: the number of elemetns
  */
 
