@@ -8,6 +8,6 @@
 
 int main(void)
 {
-	printf("");
+	printf("abc123");
 	return (0);
 }
