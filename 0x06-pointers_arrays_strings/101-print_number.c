@@ -8,7 +8,6 @@
 void print_number(int n)
 {
 	int dp = 1;
-	float f;
 	int lc = 1;
 
 	if (n == 0)
@@ -20,7 +19,6 @@ void print_number(int n)
 			n = -n;
 			_putchar('-');
 		}
-		f = n;
 		while (lc)
 		{
 			if ((n / dp) < 10)
@@ -30,20 +28,9 @@ void print_number(int n)
 		}
 		while (dp > 0)
 		{
-			if (f > 1)
-			{
-				f = f / dp;
-				n = f;
-				dp = dp / 10;
-			}
-			else
-			{
-				f = f * 10;
-				n = f;
-				dp = dp / 10;
-			}
-			_putchar(n + '0');
-			f = f - n;
+			_putchar((n / dp) + '0');
+			n = n % dp;
+			dp = dp / 10;
 		}
 	}
 }
