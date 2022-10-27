@@ -10,13 +10,13 @@
 
 char *rot13(char *s)
 {
-	int i;
-	int j;
-	int l = strlen(s);
+	unsigned long i;
+	unsigned long j;
+	unsigned long l = strlen(s);
 	char en[104] = "anANboBOcpCPdqDQerERfsFSgtGThuHUivIVjwJWkxKXlyLYmzMZ";
 	char nz[] = "naNAobOBpcPCqdQDreREsfSFtgTGuhUHviVIwjWJxkXKylYLzmZM";
-	strcat(en, nz);
 
+	strcat(en, nz);
 	for (i = 0; i < l; i++)
 	{
 		for (j = 0; j < 104; j = j + 2)
