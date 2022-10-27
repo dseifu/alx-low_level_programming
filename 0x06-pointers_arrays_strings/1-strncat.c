@@ -12,8 +12,8 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i;
-	int l = strlen(src);
+	unsigned long i;
+	unsigned long l = strlen(src);
 	char c;
 	char *cadd;
 
