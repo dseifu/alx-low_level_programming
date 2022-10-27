@@ -12,21 +12,5 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	unsigned long i;
-	unsigned long l = strlen(src);
-	char c;
-	char *cadd;
-
-	if (n < l)
-	{
-		for (i = 0; i < n; i++)
-		{
-			c = *(src + i);
-			cadd = &c;
-			strcat(dest, cadd);
-		}
-	}
-	else
-		strcat(dest, src);
-	return (dest);
+	return (strncat(dest, src, n));
 }
