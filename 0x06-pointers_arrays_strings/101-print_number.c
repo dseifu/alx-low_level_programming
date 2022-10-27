@@ -15,21 +15,32 @@ void print_number(int n)
 	else
 	{
 		if (n < 0)
-		{
-			n = -n;
 			_putchar(45);
-		}
 		while (lc)
 		{
-			if ((n / dp) < 10)
-				lc = 0;
+			if (n < 0)
+				if ((n / dp) > -10)
+					lc = 0;
+				else
+					dp = dp * 10;
 			else
-				dp = dp * 10;
+				if ((n / dp) < 10)
+					lc = 0;
+				else
+					dp = dp * 10;
 		}
 		while (dp > 0)
 		{
-			_putchar((n / dp) + '0');
-			n = n % dp;
+			if (n < 0)
+			{
+				_putchar((-(n / dp)) + '0');
+				n = -(n % dp);
+			}
+			else
+			{
+				_putchar((n / dp) + '0');
+				n = n % dp;
+			}
 			dp = dp / 10;
 		}
 	}
