@@ -1,6 +1,7 @@
 #include "main.h"
 
-#include <stdio.h>
+
+
 /**
 
  * main - check the code
@@ -15,39 +16,25 @@ int main(void)
 	
 {
 	
-	char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
+	print_number(98);
 	
-	char *p;
+	_putchar('\n');
 	
-
+	print_number(402);
 	
-	p = rot13(s);
+	_putchar('\n');
 	
-	printf("%s", p);
+	print_number(1024);
 	
-	printf("------------------------------------\n");
+	_putchar('\n');
 	
-	printf("%s", s);
+	print_number(0);
 	
-	printf("------------------------------------\n");
+	_putchar('\n');
 	
-	p = rot13(s);
+	print_number(-98);
 	
-	printf("%s", p);
-	
-	printf("------------------------------------\n");
-	
-	printf("%s", s);
-	
-	printf("------------------------------------\n");
-	
-	p = rot13(s);
-	
-	printf("%s", p);
-	
-	printf("------------------------------------\n");
-	
-	printf("%s", s);
+	_putchar('\n');
 	
 	return (0);
 	
