@@ -16,8 +16,8 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		d1sum = d1sum + a[i][i];
-		d2sum = d2sum + a[i][d2dig - i];
+		d1sum = d1sum + *(a + ((i * size) + i));
+		d2sum = d2sum + *(a + (d2dig * (i + 1)));
 	}
 	printf("%d, %d\n", d1sum, d2sum);
 }
