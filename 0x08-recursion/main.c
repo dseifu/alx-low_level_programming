@@ -16,7 +16,7 @@ int main(void)
 	
 {
 	
-	_puts_recursion("Puts with recursion");
+	_print_rev_recursion("Colton Walker");
 	
 	return (0);
 	
