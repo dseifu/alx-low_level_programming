@@ -16,7 +16,6 @@ int main(int argc, char **argv)
 	int dv;
 	int l;
 	char *argi;
-	int j;
 
 	argv++;
 	argc--;
@@ -27,12 +26,11 @@ int main(int argc, char **argv)
 		{
 			argi = *argv;
 			l = strlen(argi);
-			for (j = 0; j < l; j++)
-				if (argi[j] != 48)
-				{
-					printf("Error\n");
-					return (1);
-				}
+			if (l > 1 || argi[0] != 48)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		else
 			sum = sum + dv;
