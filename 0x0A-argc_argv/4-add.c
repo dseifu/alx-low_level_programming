@@ -16,24 +16,22 @@ int main(int argc, char **argv)
 	int dv;
 	int l;
 	char *argi;
+	int j;
 
 	argv++;
 	argc--;
 	while (argc--)
 	{
-		dv = atoi(*argv);
-		if (dv == 0)
-		{
-			argi = *argv;
-			l = strlen(argi);
-			if (l > 1 || argi[0] != 48)
+		argi = *argv;
+		l = strlen(argi);
+		for (j = 0; j < l; j++)
+			if (argi[j] < 48 || argi[j] > 57)
 			{
 				printf("Error\n");
 				return (1);
 			}
-		}
-		else
-			sum = sum + dv;
+		dv = atoi(*argv);
+		sum = sum + dv;
 		argv++;
 	}
 	printf("%d\n", sum);
