@@ -19,7 +19,7 @@ char *argstostr(int ac, char **av)
 	int i;
 	int sp = 0;
 
-	if (ac - 1 != 0 && av != NULL)
+	if (ac != 0 && av != NULL)
 	{
 		while (--cac)
 			s = s + strlen(*cav++) + 1;
