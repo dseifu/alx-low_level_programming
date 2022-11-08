@@ -22,12 +22,12 @@ char *argstostr(int ac, char **av)
 	if (ac - 1 != 0 && av != NULL)
 	{
 		while (--cac)
-			s = s + strlen(*++cav) + 1;
+			s = s + strlen(*cav++) + 1;
 		s = s + 1;
 		p = malloc(sizeof(char) * s);
 		if (p != NULL)
 		{
-			for (i = 1; i < ac; i++)
+			for (i = 0; i < ac; i++)
 			{
 				for (cac = 0; av[i][cac] != '\0'; cac++)
 					p[sp++] = av[i][cac];
