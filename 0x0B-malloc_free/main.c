@@ -1,8 +1,10 @@
-#include "main.h"
-
 #include <stdio.h>
 
 #include <stdlib.h>
+
+
+
+int **alloc_grid(int, int);
 
 
 
@@ -62,7 +64,7 @@ void print_grid(int **grid, int width, int height)
 
 /**
 
- * main - check the code for ALX School students.
+ * main - check the code .
 
  *
 
@@ -71,34 +73,36 @@ void print_grid(int **grid, int width, int height)
  */
 
 int main(void)
-	
 {
 	
 	int **grid;
 	
-
+	int h;
 	
-	grid = alloc_grid(6, 4);
+	int w;
+	
+	h = 6;
+	
+	w = 6;
+	
+	grid = alloc_grid(h, w);
 	
 	if (grid == NULL)
 		
 	{
-		
-		return (1);
+			return (1);
 		
 	}
 	
-	print_grid(grid, 6, 4);
+	print_grid(grid, h, w);
 	
 	printf("\n");
 	
-	grid[0][3] = 98;
+	/*grid[23][14] = 98;
 	
-	grid[3][4] = 402;
+	grid[19][43] = 402;
 	
-	print_grid(grid, 6, 4);
-	
-	free_grid(grid, 4);
+	print_grid(grid, h, w);*/
 	
 	return (0);
 	
