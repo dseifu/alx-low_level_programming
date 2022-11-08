@@ -17,7 +17,6 @@ int **alloc_grid(int width, int height)
 
 	if (width > 0 && height > 0)
 	{
-		printf("%ld\n", sizeof(p1));
 		p1 = malloc(sizeof(p1) * height);
 		if (p1 != NULL)
 		{
