@@ -106,7 +106,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	tmp = malloc(sizeof(tmp) * (words(str) + 1));
+	tmp = malloc(sizeof(tmp) * (words(str) + 2));
 	if (tmp == NULL)
 	{
 		return (NULL);
