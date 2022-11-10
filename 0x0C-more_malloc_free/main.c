@@ -1,4 +1,5 @@
 #include "main.h"
+
 #include <stdio.h>
 
 #include <stdlib.h>
@@ -21,7 +22,7 @@
 
  */
 
-void simple_print_buffer(char *buffer, unsigned int size)
+void simple_print_buffer(int *buffer, unsigned int size)
 	
 {
 	
@@ -77,25 +78,15 @@ int main(void)
 	
 {
 	
-	char *a;
+	int *a;
 	
 
 	
-	a = _calloc(0, sizeof(char));
-	if (a != NULL)
-	{
-		strcpy(a, "Best");
+	a = array_range(0, 10);
 	
-		strcpy(a + 4, " School! :)\n");
+	simple_print_buffer(a, 11);
 	
-		a[97] = '!';
-	
-		free(a);
-		printf("%s", a);
-	}
-	else
-		printf("NULL");
-		
+	free(a);
 	
 	return (0);
 	
