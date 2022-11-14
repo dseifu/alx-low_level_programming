@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-#include "4-sum.h"
+#include "3-function_like_macro.h"
 
-#include "4-sum.h"
+#include "3-function_like_macro.h"
 
 
 
@@ -20,13 +20,21 @@ int main(void)
 	
 {
 	
-	int s;
+	int i;
+	
+	int j;
+
+	int k;
 	
 
 	
-	s = SUM(98, 1024);
+	i = ABS(-98) * 10;
 	
-	printf("%d\n", s);
+	j = ABS(98) * 10;
+
+	k = ABS(0);
+	
+	printf("%d, %d, %d\n", i, j, k);
 	
 	return (0);
 	
