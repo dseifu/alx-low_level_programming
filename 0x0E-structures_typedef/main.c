@@ -18,7 +18,7 @@ int main(void)
 	
 {
 	
-	struct dog my_dog;
+	dog_t my_dog;
 	
 
 	
@@ -28,7 +28,7 @@ int main(void)
 	
 	my_dog.owner = "Bob";
 	
-	print_dog(&my_dog);
+	printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
 	
 	return (0);
 	
