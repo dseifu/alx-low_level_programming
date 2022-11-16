@@ -20,9 +20,9 @@ int (*get_op_func(char *s))(int a, int b)
 	int i;
 
 	i = 0;
-	while (i < (int) (sizeof(ops) / sizeof(op_t) - 1))
+	while (i < 5)
 	{
-		if (s != NULL && *ops[i].op == *s)
+		if (s != NULL && s[0] == ops[i].op[0])
 			return (ops[i].f);
 		i++;
 	}
