@@ -57,18 +57,21 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0;
 	char f;
 
-	l = strlen(format);
-	va_start(ap, format);
-	va_start(save, format);
-	while (i < l)
+	while (format != NULL)
 	{
-		f = format[i];
-		if (switch_f_and_print(f, ap, save) && i != l - 1)
-			printf(", ");
-		i++;
+		l = strlen(format);
+		va_start(ap, format);
+		va_start(save, format);
+		while (i < l)
+		{
+			f = format[i];
+			if (switch_f_and_print(f, ap, save) && i != l - 1)
+				printf(", ");
+			i++;
+		}
+		printf("\n");
+		va_end(ap);
+		va_end(save);
+		break;
 	}
-	printf("\n");
-	va_end(ap);
-	va_end(save);
-
 }
