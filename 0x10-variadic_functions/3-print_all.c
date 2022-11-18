@@ -64,7 +64,7 @@ void print_all(const char * const format, ...)
 		l = strlen(format);
 		va_start(ap, format);
 		va_start(save, format);
-		while (i < l)
+		while (i < l && format[i] != '\0')
 		{
 			f = format[i];
 			if (switch_f_and_print(f, ap, save) && i != l - 1)
