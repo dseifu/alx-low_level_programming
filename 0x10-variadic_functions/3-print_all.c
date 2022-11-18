@@ -40,7 +40,7 @@ int switch_f_and_print(char f, va_list ap, va_list save)
 			printf("%s", va_arg(save, char *));
 			break;
 		}
-		printf("(nil)");
+		printf("nil");
 		va_arg(save, char *);
 		break;
 	}
