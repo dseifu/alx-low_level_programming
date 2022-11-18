@@ -35,12 +35,12 @@ int switch_f_and_print(char f, va_list ap, va_list save)
 	case 's':
 		is_valid = 1;
 		s = va_arg(ap, char *);
-		if (s != NULL && strlen(s) != 0)
+		if (s != NULL)
 		{
 			printf("%s", va_arg(save, char *));
 			break;
 		}
-		printf("nil");
+		printf("%p", s);
 		va_arg(save, char *);
 		break;
 	}
