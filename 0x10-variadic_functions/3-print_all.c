@@ -13,6 +13,7 @@
 int switch_f_and_print(char f, va_list ap, va_list save)
 {
 	int is_valid = 0;
+	char *s;
 
 	switch (f)
 	{
@@ -33,7 +34,8 @@ int switch_f_and_print(char f, va_list ap, va_list save)
 		break;
 	case 's':
 		is_valid = 1;
-		if (va_arg(ap, char *) != NULL)
+		s = va_arg(ap, char *);
+		if (s != NULL && strlen(s) != 0)
 		{
 			printf("%s", va_arg(save, char *));
 			break;
