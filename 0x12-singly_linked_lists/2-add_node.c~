@@ -1,0 +1,26 @@
+#include "lists.h"
+
+/**
+ * add_node -adding a new node to the head of a linked list
+ * @head: the head of the linked list
+ * @str: the value of one of elements of the newly added node
+ *
+ * Return: the added node
+*/
+
+list_t *add_node(list_t **head, const char *str)
+{
+	list_t *new_node = NULL;
+
+	printf("we are good\n");
+	new_node->str = strdup(str);
+	printf("we are 1 line in\n");
+	if (str != NULL)
+		new_node->len = strlen(str);
+	printf("we are after if\n");
+	new_node->next = *head;
+	printf("we have assigned next to head\n");
+	*head = new_node;
+	printf("just before return\n");
+	return (new_node);
+}

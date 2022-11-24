@@ -1,0 +1,24 @@
+#include "lists.h"
+
+/**
+ * print_list - print all structs in the linked list
+ * @h: the linked list
+ *
+ * Return: the number of structs in the list
+*/
+
+size_t print_list(const list_t *h)
+{
+	size_t size = 0;
+
+	while (h != NULL)
+	{
+		if (h->str ! = NULL)
+			printf("[%d] %s\n", h->len, h->str);
+		else
+			printf("[0] (nil)\n");
+		size++;
+		h = h->next;
+	}
+	return (size);
+}
