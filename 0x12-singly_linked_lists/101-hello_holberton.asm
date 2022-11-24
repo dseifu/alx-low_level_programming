@@ -1,28 +1,37 @@
-	;;
-	;;  Simple NASM syntax assembly program for x86_64.
-	;;
-	;;  Use commands below to assemble, link and run ($ is the prompt):
-	;;    $ nasm -f elf64 hello_x86_64.asm
-	;;    $ gcc -o hello_x86_64 hello_x86_64.o
-	;;    $ ./hello_x86_64
-	;;    Hello, world!
-	;;
+	section	.text
 
-	extern printf
+	global	main
 
-	section .text
 
-	global main
 
 main:
-	push rbp
-	mov rbp, rsp
 
-	mov rdi, msg
-	call printf
 
-	leave
-	ret
 
-	section .data
-	    msg     db  'Hello, Holberton', 13, 10, 0
+	mov edx,len
+
+	mov ecx,msg
+
+	mov ebx,1
+
+	mov eax,4
+
+	int 0x80
+
+
+
+	mov eax,1
+
+	mov ebx,0
+
+	int 0x80
+
+
+
+
+
+	section	.data
+
+	msg db 'Hello, Holberton', 0, 10
+
+	len equ $ - msg
