@@ -1,37 +1,37 @@
-	section	.text
+	section .data
 
-	global	main
+hello:		db "Hello, Holberton",10,0
+
+format:		db "%s",0
+
+
+
+	section .text
+
+	global main
+
+	extern printf
 
 
 
 main:
 
+	push rbp
 
-
-	mov edx,len
-
-	mov ecx,msg
-
-	mov ebx,1
-
-	mov eax,4
-
-	int 0x80
+	mov rbp, rsp
 
 
 
-	mov eax,1
+	mov rsi, hello
 
-	mov ebx,0
+	mov rdi, format
 
-	int 0x80
-
-
+	call printf
 
 
 
-	section	.data
+	pop rbp
 
-	msg db 'Hello, Holberton', 0, 10
+	mov rax, 0
 
-	len equ $ - msg
+	    ret
