@@ -2,42 +2,49 @@
 
 /**
  * insert_nodeint_at_index - inserts a new node at a given position
- * @head: the head of the linked list
- * @idx: the index of the list where the new node should be added
- * @n: the position
+ * @head: First node of the list
+ * @idx: position where to insert new node
+ * @n: new node's data
  *
- * Return: the address of the new node
-*/
+ * Description: Index starts at 0. It is not possible to add the new node at
+ * index idx, do not add the new node and return NULL
+ *
+ * Return: the address of the new node, or NULL if it failed
+ */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *node = NULL;
-	listint_t *ith_node = *head;
-	unsigned int c = 0;
+	listint_t *new_node, *tmp;
+	unsigned int node_pos;
 
-	node = malloc(sizeof(listint_t));
-	if (node != NULL)
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
 	{
-		node->n = n;
-		if (idx == 0)
-		{
-			node->next = *head;
-			*head = node;
-		}
-		else
-		{
-			while (ith_node != NULL && c < idx)
-			{
-				if (idx == c + 1)
-				{
-					node->next = ith_node->next;
-					ith_node->next = node;
-					break;
-				}
-				ith_node = ith_node->next;
-				c++;
-			}
-		}
+		return (NULL);
 	}
-	return (node);
+	new_node->n = n;
+	if (idx == 0)
+	{
+		if (*head == NULL)
+			new_node->next = NULL;
+		else
+			new_node->next = *head;
+		*head = new_node;
+		return (*head);
+	}
+	tmp = *head;
+	for (node_pos = 0; node_pos < idx && tmp != NULL; node_pos++)
+	{
+		if ((node_pos + 1) == idx)
+		{
+			if (tmp->next == NULL)
+				new_node->next = NULL;
+			else
+				new_node->next = tmp->next;
+			tmp->next = new_node;
+			return (new_node);
+		}
+		tmp = tmp->next;
+	}
+	return (NULL);
 }

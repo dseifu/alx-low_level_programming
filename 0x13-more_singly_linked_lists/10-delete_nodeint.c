@@ -1,41 +1,48 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - deletes the node at index of a linked list
- * @head: the head of the linked list
- * @index: the position
+ * delete_nodeint_at_index - deletes the node at index index of a listint_t
+ * linked list, where index is the index of the node that should be deleted.
+ * Index starts at 0
+ * @head: begining of the list
+ * @index: node to delete
  *
- * Return: 1 for success -1 if not
-*/
+ * Return: 1 if it succeeded, -1 if it failed
+ */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *node = *head;
-	listint_t *nextnode;
-	unsigned int c = 0;
-	int is_deleted = -1;
+	listint_t *previous, *current;
+	unsigned int node_idx;
 
-	if (*head != NULL && index == 0)
+	current = *head;
+	if (index == 0)
 	{
-		*head = (*head)->next;
-		free(node);
-	}
-	else
-	{
-		while (node != NULL)
+		if (*head != NULL)
 		{
-			if (index == c + 1)
-			{
-				nextnode = node->next;
-				if (nextnode != NULL)
-					node->next = nextnode->next;
-				free(nextnode);
-				is_deleted = 1;
-				break;
-			}
-			node = node->next;
-			c++;
+			*head = (*head)->next;
+			free(current);
+			return (1);
+		}
+		else
+		{
+			return (-1);
 		}
 	}
-	return (is_deleted);
+	previous = current;
+	for (node_idx = 0; node_idx <= index && current != NULL; node_idx++)
+	{
+		if (node_idx == index)
+		{
+			if (current->next == NULL)
+				previous->next = NULL;
+			else
+				previous->next = current->next;
+			free(current);
+			return (1);
+		}
+		previous = current;
+		current = current->next;
+	}
+	return (-1);
 }
